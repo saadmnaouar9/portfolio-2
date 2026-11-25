@@ -1,0 +1,4 @@
+# Paste extra Behance project links here, one per line (Behance's public feed only returns
+# your 12 newest projects, so add older ones here). Then run:  node tools/import-behance.mjs
+# Optional category:  https://www.behance.net/gallery/123456/My-Project | branding
+# Category keys: brand social print packaging food football motion video web other

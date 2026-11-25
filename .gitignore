@@ -1,0 +1,7 @@
+# macOS
+.DS_Store
+
+# Raw images you drop in for import — the imported copies live in /projects.
+# (the folders and README are kept so the structure is preserved)
+import-images/*/*
+!import-images/*/.gitkeep

@@ -1,0 +1,42 @@
+{
+  "when": "2026-11-25T10:48:29.556Z",
+  "imported": [
+    {
+      "id": "235651665",
+      "title": "Menu Restaurant",
+      "images": 1,
+      "videos": 0,
+      "cover": "image-01.png",
+      "folder": "235651665-menu-restaurant"
+    }
+  ],
+  "waiting": [
+    {
+      "id": "155583463",
+      "title": "A company that sells modern sportswear",
+      "folder": "155583463-a-company-that-sells-modern-sportswear"
+    },
+    {
+      "id": "219515885",
+      "title": "Social Media design",
+      "folder": "219515885-social-media-design"
+    },
+    {
+      "id": "230189267",
+      "title": "Social Media design",
+      "folder": "230189267-social-media-design"
+    },
+    {
+      "id": "233969745",
+      "title": "STORM SPORTS ACADEMY",
+      "folder": "233969745-storm-sports-academy"
+    },
+    {
+      "id": "234962725",
+      "title": "Football Design",
+      "folder": "234962725-football-design"
+    }
+  ],
+  "skipped": [],
+  "warnings": []
+}

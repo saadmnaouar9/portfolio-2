@@ -1,0 +1,27 @@
+	# Paste the Behance URL of each MISSING project here, one per line, then run:
+#     node tools/add-projects.mjs
+# Optional category after a "|" (otherwise it is guessed from the title):
+#     https://www.behance.net/gallery/123456789/My-Project | brand
+# Category keys: brand social print posters packaging food football motion video web other
+# Your 12 existing projects are detected automatically and skipped (no duplicates).
+
+
+https://www.behance.net/gallery/245980425/Social-Media-Post
+https://www.behance.net/gallery/244435111/Social-Media-post
+https://www.behance.net/gallery/242821977/Social-Media-post
+https://www.behance.net/gallery/242057177/Social-Media-Post
+https://www.behance.net/gallery/242055653/Social-Media-Post
+https://www.behance.net/gallery/235651665/Menu-Restaurant
+https://www.behance.net/gallery/234962725/Football-Design
+https://www.behance.net/gallery/233969745/STORM-SPORTS-ACADEMY
+https://www.behance.net/gallery/230189267/Social-Media-design
+https://www.behance.net/gallery/223766139/Naayak-Motors
+https://www.behance.net/gallery/219515885/Social-Media-design
+https://www.behance.net/gallery/186169195/VISCONTI
+https://www.behance.net/gallery/176573473/AMA-Engineering-design-and-construction-company
+https://www.behance.net/gallery/174702331/Monte-Carlo-Studios
+https://www.behance.net/gallery/172331749/BILSSAN
+https://www.behance.net/gallery/169396459/MATCH-DAY-DESIGNS
+https://www.behance.net/gallery/155583463/A-company-that-sells-modern-sportswear
+https://www.behance.net/gallery/154539385/SAM-travel
+https://www.behance.net/gallery/141298409/Artex-Full-Branding-Project

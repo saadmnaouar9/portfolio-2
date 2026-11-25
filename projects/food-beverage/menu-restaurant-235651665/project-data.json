@@ -1,0 +1,23 @@
+{
+  "id": "be-235651665",
+  "behanceId": "235651665",
+  "slug": "menu-restaurant-235651665",
+  "title": "Menu Restaurant",
+  "categories": [
+    "food"
+  ],
+  "description": "",
+  "cover": "image-01.png",
+  "images": [
+    {
+      "file": "image-01.png",
+      "source": "01.png",
+      "w": 2800,
+      "h": 1867
+    }
+  ],
+  "videos": [],
+  "expected": 1,
+  "imported": 1,
+  "source": "local-folder"
+}
