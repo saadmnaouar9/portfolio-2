@@ -65,7 +65,7 @@ h1,h2,h3{font-family:var(--f-display);line-height:1;letter-spacing:-.035em;font-
 .btn:hover svg{transform:rotate(45deg)}
 .btn--dark:hover{--bg:var(--lime);--fg:var(--on-accent)}
 .btn--lime{--bg:var(--lime);--fg:var(--on-accent)}
-.btn--lime:hover{--bg:var(--white)}
+.btn--lime:hover{--bg:var(--white);--fg:var(--black)}
 .btn--ghost{--bg:transparent;--fg:var(--black);border-color:var(--black)}
 .btn--ghost:hover{--bg:var(--black);--fg:var(--white)}
 .btn--sm{padding:12px 20px;font-size:14px}
@@ -427,7 +427,7 @@ h1,h2,h3{font-family:var(--f-display);line-height:1;letter-spacing:-.035em;font-
 .nav__right{flex:1;justify-content:flex-end}
 .nav__right .btn--lime{border-radius:0;padding:0 0 0 22px;height:48px;gap:16px;border:1px solid var(--black)}
 .nav__right .btn--lime svg{width:48px;height:48px;padding:14px;background:var(--black);stroke:var(--accent-t)}
-.nav__right .btn--lime:hover{--bg:var(--black);--fg:var(--lime)}
+.nav__right .btn--lime:hover{--bg:var(--black);--fg:var(--white)}
 .nav__right .btn--lime:hover svg{background:var(--lime);stroke:var(--on-accent)}
 .avail{padding-right:6px}
 @media (max-width:1100px){.nav__links{display:none}.nav__bar{height:68px}}
@@ -590,7 +590,7 @@ a.pd__cat:hover{background:var(--black);color:var(--accent-t)}
 .pd__pbtn{position:relative;display:inline-flex;align-items:center;gap:16px;padding:6px 6px 6px 26px;border-radius:99px;background:var(--lime);color:var(--on-accent);font:700 15px var(--f-display);transition:background .3s,transform .4s var(--ease)}
 .pd__pbtn i{width:48px;height:48px;border-radius:50%;background:var(--black);color:var(--accent-t);display:grid;place-items:center;transition:transform .5s var(--ease)}
 .pd__pbtn i svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
-.pd__pbtn:hover{background:var(--white);transform:translateY(-3px)}
+.pd__pbtn:hover{background:var(--white);color:var(--black);transform:translateY(-3px)}
 .pd__pbtn:hover i{transform:rotate(45deg)}
 @media (max-width:640px){.pd__pending{flex-direction:column;align-items:flex-start}.pd__pbtn{width:100%;justify-content:space-between}}
 
