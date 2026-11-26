@@ -471,7 +471,7 @@ h1,h2,h3{font-family:var(--f-display);line-height:1;letter-spacing:-.035em;font-
    PORTFOLIO v2: category tiles, search, full-page project & category views
    ========================================================================= */
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
-.cats{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-bottom:clamp(40px,5vw,64px)}
+.cats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:clamp(40px,5vw,64px)}
 .cat{position:relative;display:flex;flex-direction:column;justify-content:flex-end;aspect-ratio:4/5;padding:18px;border-radius:var(--r-md);border:1px solid var(--line-d);overflow:hidden;
   transition:opacity .9s var(--ease),transform .9s var(--ease),border-color .4s;transition-delay:calc(var(--i)*50ms),calc(var(--i)*50ms),0s;place-items:initial}
 .cat.in:hover{transition-delay:0s;transform:translateY(-8px);border-color:var(--lime)}
@@ -639,3 +639,10 @@ a.pd__cat:hover{background:var(--black);color:var(--lime)}
 .cat--soon{opacity:.55}.cat--soon:hover{opacity:.85}
 .cat--soon .cat__art{filter:grayscale(1)}
 [hidden]{display:none!important}
+
+/* services: 5 cards per row on desktop (10 services = 2 even rows) */
+.services{grid-template-columns:repeat(5,minmax(0,1fr));gap:14px}
+.svc{padding:22px;min-height:280px}
+.svc h3{overflow-wrap:anywhere}
+@media (max-width:1100px){.services{grid-template-columns:repeat(2,minmax(0,1fr))}.svc{padding:24px}}
+@media (max-width:560px){.services{grid-template-columns:minmax(0,1fr)}.svc{min-height:0}}
