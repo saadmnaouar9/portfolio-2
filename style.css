@@ -634,3 +634,8 @@ a.pd__cat:hover{background:var(--black);color:var(--lime)}
 
 /* fallback artwork on the project page: use the category colours (was white-on-grey) */
 .shot.ph{background:var(--bg);color:var(--fg);aspect-ratio:16/9;max-height:520px}
+
+/* empty categories: quiet "coming soon" state */
+.cat--soon{opacity:.55}.cat--soon:hover{opacity:.85}
+.cat--soon .cat__art{filter:grayscale(1)}
+[hidden]{display:none!important}

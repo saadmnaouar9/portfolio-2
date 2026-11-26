@@ -35,7 +35,13 @@
     whatsapp: `https://wa.me/${(C.whatsapp || "").replace(/\D/g, "")}`,
     behance: C.behance, instagram: C.instagram, linkedin: C.linkedin
   };
-  $$("[data-link]").forEach(a => { const h = linkMap[a.dataset.link]; if (h) a.href = h; });
+  const isPlaceholder = v => !v || /yourdomain|yourprofile|^2126000000+$/.test(String(v));
+  const emailOK = !isPlaceholder(C.email);
+  $$("[data-link]").forEach(a => {
+    const k = a.dataset.link;
+    if (isPlaceholder(C[k])) { (a.closest("li") || a).hidden = true; return; }   // never ship a dead / fake link
+    if (linkMap[k]) a.href = linkMap[k];
+  });
   $$("[data-text=email]").forEach(el => el.textContent = C.email || el.textContent);
   $("#year").textContent = new Date().getFullYear();
 
@@ -157,11 +163,11 @@
   /* ---------- CATEGORY TILES (each opens its own page) ---------- */
   const catGrid = $("#catGrid");
   catGrid.innerHTML = cats.map((c, i) => `
-    <a class="cat ph" data-tone="${c.tone}" style="--i:${i}" href="#/category/${esc(c.key)}" data-cursor="Open">
+    <a class="cat ph${inCat(c.key).length ? "" : " cat--soon"}" data-tone="${c.tone}" style="--i:${i}" href="#/category/${esc(c.key)}" data-cursor="Open">
       <span class="cat__n">${esc(c.num)}</span>
       <span class="cat__art">${art(c.art)}</span>
       <span class="cat__name">${esc(c.label)}</span>
-      <span class="cat__count">${inCat(c.key).length} project${inCat(c.key).length === 1 ? "" : "s"}</span>
+      <span class="cat__count">${inCat(c.key).length ? `${inCat(c.key).length} project${inCat(c.key).length === 1 ? "" : "s"}` : "Coming soon"}</span>
     </a>`).join("");
 
   /* ---------- GRID: filters + search + lazy "load more on scroll" ---------- */
@@ -330,6 +336,13 @@
   let lbList = [], lbI = 0;
   const lbShow = i => { lbI = (i + lbList.length) % lbList.length; const im = $("img", lb); im.src = lbList[lbI].src; im.alt = lbList[lbI].alt || ""; $(".lb__c", lb).textContent = `${lbI + 1} / ${lbList.length}`; lb.classList.toggle("single", lbList.length < 2); };
   const lbClose = () => { lb.classList.remove("open"); lb.setAttribute("aria-hidden", "true"); };
+  let tx0 = null;   // swipe left/right to change image on touch screens
+  lb.addEventListener("touchstart", e => { tx0 = e.touches.length === 1 ? e.touches[0].clientX : null; }, { passive: true });
+  lb.addEventListener("touchend", e => {
+    if (tx0 === null || lbList.length < 2) return;
+    const dx = e.changedTouches[0].clientX - tx0; tx0 = null;
+    if (Math.abs(dx) > 50) lbShow(lbI + (dx < 0 ? 1 : -1));
+  }, { passive: true });
   document.addEventListener("click", e => {
     const z = e.target.closest("[data-zoom]"); if (!z) return;
     const imgs = $$(".pd__flow .shot img", mBody); lbList = imgs.map(i => ({ src: i.currentSrc || i.src, alt: i.alt }));
@@ -417,6 +430,8 @@
         if (!r.ok) throw 0;
         form.reset(); say("Thank you! Your message was sent. I'll reply soon.");
       } catch { say("Something went wrong. Please email me directly.", true); }
+    } else if (!emailOK) {
+      say("Messaging isn't available just yet. Please check back soon.", true);
     } else {
       const subject = encodeURIComponent(`Project enquiry — ${d.type}`);
       const body = encodeURIComponent(`${d.message}\n\n— ${d.name} (${d.email})`);

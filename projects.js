@@ -45,7 +45,7 @@ window.SITE = {
   /* ---------- HERO IMAGES (optional) ----------
      Add up to 5 paths to replace the mockup cards around the hero.
      Example: ["assets/hero/1.jpg", "assets/hero/2.jpg", ...]            */
-  heroImages: [],
+  heroImages: ["assets/hero/3.webp", "assets/hero/2.webp", "assets/hero/4.webp", "assets/hero/1.webp", "assets/hero/5.webp"],
 
   /* ---------- CATEGORIES (edit labels / blurbs / order freely) ---------- */
   categories: [
