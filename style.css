@@ -440,7 +440,7 @@ h1,h2,h3{font-family:var(--f-display);line-height:1;letter-spacing:-.035em;font-
 
 /* portrait photo sits on its own light backdrop */
 .portrait{background:#F8F8F8}
-.portrait img{object-position:50% 20%}
+.portrait img{object-fit:contain;object-position:50% 100%}
 
 /* Behance project embed inside the project view */
 .pd__embed{background:var(--grey)}
