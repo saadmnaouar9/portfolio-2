@@ -26,7 +26,7 @@ window.SITE = {
   contact: {
     email: "hello@yourdomain.com",          // ← your real email
     whatsapp: "212600000000",               // ← country code + number, digits only
-    behance: "https://www.behance.net/yourprofile",
+    behance: "https://www.behance.net/mnaouarsaad",
     instagram: "https://www.instagram.com/yourprofile",
     linkedin: "https://www.linkedin.com/in/yourprofile",
     // Optional: paste a Formspree / Getform endpoint to send the form directly.
