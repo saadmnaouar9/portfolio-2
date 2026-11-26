@@ -42,11 +42,6 @@ window.SITE = {
     { value: 10,  suffix: "",  label: "Creative services" }
   ],
 
-  /* ---------- HERO IMAGES (optional) ----------
-     Add up to 5 paths to replace the mockup cards around the hero.
-     Example: ["assets/hero/1.jpg", "assets/hero/2.jpg", ...]            */
-  heroImages: ["assets/hero/3.webp", "assets/hero/2.webp", "assets/hero/4.webp", "assets/hero/1.webp", "assets/hero/5.webp"],
-
   /* ---------- CATEGORIES (edit labels / blurbs / order freely) ---------- */
   categories: [
     { key: "brand",     num: "01", label: "Brand Identity",             tone: 3, art: "branding",  blurb: "Logos, visual identities, brand guidelines and rebrands that give companies a face people remember." },

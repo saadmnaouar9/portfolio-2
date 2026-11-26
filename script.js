@@ -47,11 +47,6 @@
   $$("[data-text=email]").forEach(el => el.textContent = C.email || el.textContent);
   $("#year").textContent = new Date().getFullYear();
 
-  /* ---------- HERO cards ---------- */
-  $$(".ph[data-art]").forEach((el, i) => {
-    const img = (SITE.heroImages || [])[+el.dataset.hero];
-    el.innerHTML = img ? `<img src="${esc(img)}" alt="" loading="eager" decoding="async">` : art(el.dataset.art);
-  });
 
   /* ---------- LOADER ---------- */
   const loader = $("#loader"), bar = $("#loaderBar"), cnt = $("#loaderCount");
@@ -376,19 +371,6 @@
       });
       b.addEventListener("mouseleave", () => b.style.transform = "");
     });
-  }
-
-  /* ---------- HERO PARALLAX ---------- */
-  const stage = $("#stage");
-  if (stage && fine && !reduce) {
-    const cards = $$(".hc", stage);
-    const base = new Map(cards.map(c => [c, c.classList.contains("hc--c") ? "translate(-50%,-50%)" : ""]));
-    stage.addEventListener("mousemove", e => {
-      const r = stage.getBoundingClientRect();
-      const x = (e.clientX - r.left) / r.width - .5, y = (e.clientY - r.top) / r.height - .5;
-      cards.forEach(c => { const d = +c.dataset.depth; c.style.transform = `${base.get(c)} translate(${x * d}px,${y * d}px)`; });
-    });
-    stage.addEventListener("mouseleave", () => cards.forEach(c => c.style.transform = base.get(c)));
   }
 
   /* ---------- CUSTOM CURSOR (desktop only, subtle) ---------- */

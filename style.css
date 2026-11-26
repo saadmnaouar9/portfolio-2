@@ -131,7 +131,7 @@ h1,h2,h3{font-family:var(--f-display);line-height:1;letter-spacing:-.035em;font-
 .menu__foot{margin-top:40px;color:var(--muted-d);font-size:14px}
 
 /* ---------- 5. HERO ---------- */
-.hero{position:relative;padding:clamp(130px,16vw,190px) 0 80px;background:var(--white);overflow:hidden;
+.hero{position:relative;padding:clamp(130px,16vw,190px) 0 clamp(110px,8vw,120px);background:var(--white);overflow:hidden;
   background-image:radial-gradient(rgba(9,9,9,.07) 1px,transparent 1px);background-size:28px 28px}
 .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(var(--white) 0,transparent 20%,transparent 75%,var(--white) 100%);pointer-events:none;opacity:.9}
 .hero>*{position:relative;z-index:1}
@@ -148,25 +148,6 @@ h1,h2,h3{font-family:var(--f-display);line-height:1;letter-spacing:-.035em;font-
 .hero__cta{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:36px}
 .reveal-load{opacity:0;transform:translateY(30px);transition:opacity 1s var(--ease),transform 1s var(--ease);transition-delay:calc(var(--i)*.1s + .2s)}
 .is-loaded .reveal-load{opacity:1;transform:none}
-
-/* hero composition */
-.stage{position:relative;height:clamp(380px,50vw,620px);margin-top:clamp(50px,7vw,90px)}
-.stage__glow{position:absolute;left:50%;top:50%;width:60%;height:70%;transform:translate(-50%,-50%);background:var(--lime);filter:blur(110px);opacity:.28;border-radius:0}
-.hc{position:absolute;transition:transform .4s ease-out;will-change:transform}
-.hc__in{width:100%;height:100%;border-radius:0;overflow:hidden;border:1px solid var(--line-l);box-shadow:0 30px 70px -20px rgba(0,0,0,.28);animation:float 7s ease-in-out infinite;animation-delay:var(--f,0s)}
-@keyframes float{50%{transform:translateY(-16px) rotate(.6deg)}}
-.hc--c{left:50%;top:50%;width:clamp(210px,28vw,350px);aspect-ratio:4/5;transform:translate(-50%,-50%);z-index:3}
-.hc--c .hc__in{border-radius:0;border-color:rgba(255,255,255,.1)}
-.hc--a{left:7%;top:6%;width:clamp(120px,19vw,240px);aspect-ratio:1;z-index:2;rotate:-5deg}
-.hc--b{right:6%;top:2%;width:clamp(110px,16vw,205px);aspect-ratio:3/4;z-index:2;rotate:6deg}
-.hc--d{left:10%;bottom:2%;width:clamp(150px,22vw,290px);aspect-ratio:16/10;z-index:4;rotate:3deg}
-.hc--e{right:9%;bottom:0;width:clamp(110px,15vw,190px);aspect-ratio:4/5;z-index:4;rotate:-4deg}
-.chip{position:absolute;z-index:5;padding:10px 16px;border-radius:0;font:600 13px var(--f-display);background:var(--black);color:var(--white);animation:float 6s ease-in-out infinite}
-.chip::before{content:"";display:inline-block;width:7px;height:7px;border-radius:0;background:var(--lime);margin-right:8px}
-.chip--1{left:30%;top:2%}.chip--2{right:27%;top:44%;animation-delay:-2s;background:var(--lime);color:var(--black)}
-.chip--2::before{background:var(--black)}
-.chip--3{left:24%;bottom:14%;animation-delay:-3s;background:var(--white);color:var(--black);border:1px solid var(--line-l)}
-.chip--3::before{background:var(--black)}
 
 .scroll{position:absolute!important;left:50%;bottom:20px;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:8px;font:600 10px var(--f-display);letter-spacing:.2em;text-transform:uppercase;color:var(--muted-l);z-index:5!important}
 .scroll__mouse{width:22px;height:34px;border:1.5px solid var(--black);border-radius:0;position:relative}
@@ -187,7 +168,7 @@ h1,h2,h3{font-family:var(--f-display);line-height:1;letter-spacing:-.035em;font-
 .ph .t{font:800 26px var(--f-display);fill:currentColor;letter-spacing:-.04em}
 .ph .tm{font:600 11px var(--f-display);fill:currentColor;letter-spacing:.2em;opacity:.55}
 .ph .gl{opacity:.12}
-.ph img,.hc__in img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 
 /* ---------- marquee ---------- */
 .marquee{background:var(--lime);color:var(--black);overflow:hidden;padding:20px 0;border-block:1px solid var(--black)}
@@ -387,7 +368,6 @@ h1,h2,h3{font-family:var(--f-display);line-height:1;letter-spacing:-.035em;font-
   .about__media{max-width:440px}
   .card--landscape,.card--wide{grid-column:span 12}
   .card--portrait,.card--square{grid-column:span 6}
-  .chip{display:none}
   .avail{display:none}
 }
 @media (max-width:640px){
@@ -397,11 +377,9 @@ h1,h2,h3{font-family:var(--f-display);line-height:1;letter-spacing:-.035em;font-
   .step{min-height:240px}
   .card--portrait,.card--square{grid-column:span 12}
   .card--portrait{aspect-ratio:4/5}
-  .hc--a{left:0}.hc--b{right:0}.hc--d{left:0}.hc--e{right:0}
   .pd__gal{grid-template-columns:1fr}
   .hero__cta .btn{flex:1 1 100%}
   .scroll{display:none}
-  .stage{height:420px}
   .foot__in{flex-direction:column}
 }
 
@@ -414,14 +392,14 @@ h1,h2,h3{font-family:var(--f-display);line-height:1;letter-spacing:-.035em;font-
 }
 
 /* ---------- Square corners: only tiny status dots stay round ---------- */
-.avail i,.dot,.pulse,.cursor,.marquee__track i,.label::before,.chip::before,.step::before,.stage__glow,.svc::before{border-radius:50%}
+.avail i,.dot,.pulse,.cursor,.marquee__track i,.label::before,.step::before,.svc::before{border-radius:50%}
 
 /* ---------- Rounded corners restored everywhere EXCEPT the logo (stays square) ---------- */
-.label,.btn,.skip,.nav__bar,.nav__links a,.badge,.chip,.fbtn,.card__tag,.portrait__tag,.socials a,.pd__cat,.avail,.marquee__track i{border-radius:99px}
+.label,.btn,.skip,.nav__bar,.nav__links a,.badge,.fbtn,.card__tag,.portrait__tag,.socials a,.pd__cat,.avail,.marquee__track i{border-radius:99px}
 .burger,.card__go,.modal__nav button{border-radius:50%}
 .hero__title mark{border-radius:.14em}
-.hc__in,.stat,.approach,.card,.svc,.tool,.step,.form,.pd__gal>*,.portrait,.pd__meta div,.pd__note{border-radius:var(--r-md)}
-.hc--c .hc__in,.portrait,.card,.svc,.tool,.step,.form{border-radius:var(--r-lg)}
+.stat,.approach,.card,.svc,.tool,.step,.form,.pd__gal>*,.portrait,.pd__meta div,.pd__note{border-radius:var(--r-md)}
+.portrait,.card,.svc,.tool,.step,.form{border-radius:var(--r-lg)}
 .pd__meta div,.pd__note{border-radius:var(--r-sm)}
 .svc__ico,.tool__ico{border-radius:18px}
 .loader__bar,.loader__bar i{border-radius:2px}
