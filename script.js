@@ -42,6 +42,8 @@
     if (isPlaceholder(C[k])) { (a.closest("li") || a).hidden = true; return; }   // never ship a dead / fake link
     if (linkMap[k]) a.href = linkMap[k];
   });
+  const cl = $(".contact__links");
+  if (cl && $$("[data-link]", cl).every(a => (a.closest("li") || a).hidden)) cl.hidden = true;
   $$("[data-text=email]").forEach(el => el.textContent = C.email || el.textContent);
   $("#year").textContent = new Date().getFullYear();
 

@@ -646,3 +646,21 @@ a.pd__cat:hover{background:var(--black);color:var(--lime)}
 .svc h3{overflow-wrap:anywhere}
 @media (max-width:1100px){.services{grid-template-columns:repeat(2,minmax(0,1fr))}.svc{padding:24px}}
 @media (max-width:560px){.services{grid-template-columns:minmax(0,1fr)}.svc{min-height:0}}
+
+/* contact: what-happens-next list + service chips */
+.next{list-style:none;margin:44px 0 0;padding:0;display:flex;flex-direction:column;counter-reset:n;max-width:460px;border-top:1px solid var(--line-d)}
+.next li{counter-increment:n;display:grid;grid-template-columns:34px 1fr;column-gap:6px;padding:18px 0;border-bottom:1px solid var(--line-d)}
+.next li::before{content:counter(n);grid-row:span 2;font:700 13px var(--f-display);color:var(--lime);letter-spacing:.08em;padding-top:3px}
+.next b{font:600 17px var(--f-display);letter-spacing:-.02em}
+.next span{color:var(--muted-d);font-size:14px;line-height:1.5;margin-top:4px}
+.contact__links{margin-top:32px}
+.chips{border:0;margin:0;padding:0;min-width:0;display:flex;flex-wrap:wrap;gap:8px}
+.chips legend{font:600 11px var(--f-display);letter-spacing:.14em;text-transform:uppercase;color:var(--muted-d);margin-bottom:12px;padding:0;float:left;width:100%}
+.chips label{margin:0;letter-spacing:0;text-transform:none;font:500 14px var(--f-display);color:var(--white);cursor:pointer;position:relative}
+.chips input{position:absolute;opacity:0;width:1px;height:1px;padding:0;border:0}
+.chips span{display:inline-block;padding:10px 16px;border:1px solid var(--line-d);border-radius:999px;transition:background .25s,color .25s,border-color .25s}
+.chips label:hover span{border-color:var(--lime)}
+.chips input:checked+span{background:var(--lime);color:var(--black);border-color:var(--lime)}
+.chips input:focus-visible+span{outline:2px solid var(--lime);outline-offset:3px}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+@media (max-width:560px){.row2{grid-template-columns:1fr;gap:20px}}

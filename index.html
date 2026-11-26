@@ -239,6 +239,12 @@
       <h2 class="h2 h2--xl reveal">Have a Project<br>in <em>Mind?</em></h2>
       <p class="lead reveal">Let's create something extraordinary together.</p>
 
+      <ol class="next reveal" aria-label="What happens next">
+        <li><b>You send the brief</b><span>A few lines on the project, the audience and the deadline.</span></li>
+        <li><b>I reply within 24 hours</b><span>With questions, a direction and a clear quote.</span></li>
+        <li><b>We start designing</b><span>Concepts first, then refinements until it's right.</span></li>
+      </ol>
+
       <div class="contact__links reveal">
         <a class="mail" data-link="email" href="#"><small>Email</small><span data-text="email">hello@yourdomain.com</span></a>
         <a class="btn btn--wa magnetic" data-link="whatsapp" href="#" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12a8 8 0 01-11.7 7L4 20l1.1-4.1A8 8 0 1120 12z"/><path d="M9 9c0 3 3 6 6 6l1-1.5-2-1-1 .8c-.8-.4-1.7-1.300-2-2l.8-1-1-2z"/></svg><span>WhatsApp</span></a>
@@ -251,12 +257,19 @@
     </div>
 
     <form class="form reveal" id="form" novalidate>
-      <div class="field"><label for="f-name">Your name</label><input id="f-name" name="name" type="text" autocomplete="name" required placeholder="Jane Doe"></div>
-      <div class="field"><label for="f-email">Email</label><input id="f-email" name="email" type="email" autocomplete="email" required placeholder="you@company.com"></div>
-      <div class="field"><label for="f-type">I need help with</label>
-        <select id="f-type" name="type">
-          <option>Brand Identity &amp; Logo</option><option>Social Media Design</option><option>Advertising &amp; Campaign</option><option>Posters, Flyers &amp; Print</option><option>Motion Graphics / Video</option><option>UX/UI &amp; Web</option><option>Something else</option>
-        </select>
+      <fieldset class="field chips">
+        <legend>I need help with</legend>
+        <label><input type="radio" name="type" value="Brand Identity &amp; Logo" checked><span>Brand &amp; Logo</span></label>
+        <label><input type="radio" name="type" value="Social Media Design"><span>Social Media</span></label>
+        <label><input type="radio" name="type" value="Advertising &amp; Campaign"><span>Advertising</span></label>
+        <label><input type="radio" name="type" value="Posters, Flyers &amp; Print"><span>Posters &amp; Print</span></label>
+        <label><input type="radio" name="type" value="Motion Graphics / Video"><span>Motion &amp; Video</span></label>
+        <label><input type="radio" name="type" value="UX/UI &amp; Web"><span>UX/UI &amp; Web</span></label>
+        <label><input type="radio" name="type" value="Something else"><span>Something else</span></label>
+      </fieldset>
+      <div class="row2">
+        <div class="field"><label for="f-name">Your name</label><input id="f-name" name="name" type="text" autocomplete="name" required placeholder="Jane Doe"></div>
+        <div class="field"><label for="f-email">Email</label><input id="f-email" name="email" type="email" autocomplete="email" required placeholder="you@company.com"></div>
       </div>
       <div class="field"><label for="f-msg">Project details</label><textarea id="f-msg" name="message" rows="4" required placeholder="Tell me about your project, timeline and budget…"></textarea></div>
       <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" class="hp" aria-hidden="true">
