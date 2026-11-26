@@ -44,17 +44,17 @@ window.SITE = {
 
   /* ---------- CATEGORIES (edit labels / blurbs / order freely) ---------- */
   categories: [
-    { key: "brand",     num: "01", label: "Brand Identity",             tone: 3, art: "branding",  blurb: "Logos, visual identities, brand guidelines and rebrands that give companies a face people remember." },
-    { key: "social",    num: "02", label: "Social Media Design",        tone: 1, art: "social",    blurb: "Posts, carousels, campaigns and promotional visuals built to stop the scroll." },
-    { key: "print",     num: "03", label: "Print Design",               tone: 2, art: "ads",       blurb: "Business cards, brochures, catalogues, roll-ups, banners and printed advertising." },
-    { key: "posters",   num: "04", label: "Posters & Flyers",           tone: 0, art: "posters",   blurb: "Posters and flyers for events, promotions and announcements that read instantly." },
-    { key: "packaging", num: "05", label: "Packaging & Product Design", tone: 1, art: "packaging", blurb: "Packaging, product mockups and commercial visuals that sell on the shelf." },
-    { key: "food",      num: "06", label: "Food & Beverage",            tone: 3, art: "food",      blurb: "Appetising visuals for restaurants, food brands and beverage campaigns." },
-    { key: "football",  num: "07", label: "Football & Sports Design",   tone: 0, art: "football",  blurb: "Matchday graphics, player designs and sports campaigns with energy." },
-    { key: "motion",    num: "08", label: "Motion Graphics & AI Videos",tone: 1, art: "motion",    blurb: "Animated adverts, motion graphics and creative AI video projects." },
-    { key: "video",     num: "09", label: "Video Editing",              tone: 2, art: "video",     blurb: "Commercial and promotional videos, cut with rhythm." },
-    { key: "web",       num: "10", label: "Web Design & UI/UX",         tone: 3, art: "web",       blurb: "Websites, landing pages and digital interfaces designed around users." },
-    { key: "other",     num: "11", label: "Other Creative Projects",    tone: 1, art: "other",     blurb: "Everything else that doesn't fit a box." }
+    { key: "brand", image: "assets/categories/brand.webp",     num: "01", label: "Brand Identity",             tone: 3, art: "branding",  blurb: "Logos, visual identities, brand guidelines and rebrands that give companies a face people remember." },
+    { key: "social", image: "assets/categories/social.webp",    num: "02", label: "Social Media Design",        tone: 1, art: "social",    blurb: "Posts, carousels, campaigns and promotional visuals built to stop the scroll." },
+    { key: "print", image: "assets/categories/print.webp",     num: "03", label: "Print Design",               tone: 2, art: "ads",       blurb: "Business cards, brochures, catalogues, roll-ups, banners and printed advertising." },
+    { key: "posters", image: "assets/categories/posters.webp",   num: "04", label: "Posters & Flyers",           tone: 0, art: "posters",   blurb: "Posters and flyers for events, promotions and announcements that read instantly." },
+    { key: "packaging", image: "assets/categories/packaging.webp", num: "05", label: "Packaging & Product Design", tone: 1, art: "packaging", blurb: "Packaging, product mockups and commercial visuals that sell on the shelf." },
+    { key: "food", image: "assets/categories/food.webp",      num: "06", label: "Food & Beverage",            tone: 3, art: "food",      blurb: "Appetising visuals for restaurants, food brands and beverage campaigns." },
+    { key: "football", image: "assets/categories/football.webp",  num: "07", label: "Football & Sports Design",   tone: 0, art: "football",  blurb: "Matchday graphics, player designs and sports campaigns with energy." },
+    { key: "motion", image: "assets/categories/motion.webp",    num: "08", label: "Motion Graphics & AI Videos",tone: 1, art: "motion",    blurb: "Animated adverts, motion graphics and creative AI video projects." },
+    { key: "video", image: "assets/categories/video.webp",     num: "09", label: "Video Editing",              tone: 2, art: "video",     blurb: "Commercial and promotional videos, cut with rhythm." },
+    { key: "web", image: "assets/categories/web.webp",       num: "10", label: "Web Design & UI/UX",         tone: 3, art: "web",       blurb: "Websites, landing pages and digital interfaces designed around users." },
+    { key: "other", image: "assets/categories/other.webp",     num: "11", label: "Other Creative Projects",    tone: 1, art: "other",     blurb: "Everything else that doesn't fit a box." }
   ],
 
   /* ---------- EDITS TO IMPORTED PROJECTS (classified by viewing each cover) ---------- */

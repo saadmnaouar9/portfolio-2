@@ -159,8 +159,11 @@
 
   /* ---------- CATEGORY TILES (each opens its own page) ---------- */
   const catGrid = $("#catGrid");
+  // tile image: the category's own `image` (set in projects.js); tiles without one keep the line-art drawing
+  const catCover = c => c.image || "";
   catGrid.innerHTML = cats.map((c, i) => `
-    <a class="cat ph${inCat(c.key).length ? "" : " cat--soon"}" data-tone="${c.tone}" style="--i:${i}" href="#/category/${esc(c.key)}" data-cursor="Open">
+    <a class="cat ph${inCat(c.key).length ? "" : " cat--soon"}${catCover(c) ? " cat--img" : ""}" data-tone="${c.tone}" style="--i:${i}" href="#/category/${esc(c.key)}" data-cursor="Open">
+      ${catCover(c) ? `<img class="cat__img" src="${esc(catCover(c))}" alt="" loading="lazy" decoding="async" onerror="this.closest('.cat').classList.remove('cat--img');this.remove()">` : ""}
       <span class="cat__n">${esc(c.num)}</span>
       <span class="cat__art">${art(c.art)}</span>
       <span class="cat__name">${esc(c.label)}</span>
