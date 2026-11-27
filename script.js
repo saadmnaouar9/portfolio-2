@@ -32,7 +32,7 @@
   const C = SITE.contact || {};
   const linkMap = {
     email: `mailto:${C.email || ""}`,
-    whatsapp: `https://wa.me/${(C.whatsapp || "").replace(/\D/g, "")}`,
+    whatsapp: `https://wa.me/${(C.whatsapp || "").replace(/\D/g, "")}?text=${encodeURIComponent("Hello Saad, I saw your portfolio and I'd like to talk about a project.")}`,
     behance: C.behance, instagram: C.instagram, linkedin: C.linkedin
   };
   const isPlaceholder = v => !v || /yourdomain|yourprofile|^2126000000+$/.test(String(v));
