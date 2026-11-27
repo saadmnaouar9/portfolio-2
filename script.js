@@ -366,7 +366,7 @@
   route(); // deep links like index.html#/project/be-246912965
 
   /* ---------- MAGNETIC BUTTONS ---------- */
-  if (fine && !reduce) {
+  if (false && fine && !reduce) { // disabled: buttons stay in place on hover
     $$(".magnetic").forEach(b => {
       b.addEventListener("mousemove", e => {
         const r = b.getBoundingClientRect();

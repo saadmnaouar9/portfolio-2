@@ -63,9 +63,7 @@ h1,h2,h3{font-family:var(--f-display);line-height:1;letter-spacing:-.035em;font-
 .btn{--bg:var(--black);--fg:var(--white);display:inline-flex;align-items:center;justify-content:center;gap:12px;padding:16px 28px;border-radius:0;background:var(--bg);color:var(--fg);font:600 15px/1 var(--f-display);letter-spacing:-.01em;border:1px solid transparent;transition:color .35s var(--ease),border-color .35s,transform .4s var(--ease);will-change:transform;position:relative;isolation:isolate;overflow:hidden;--hbg:var(--lime);--hfg:var(--on-accent)}
 .btn::before{content:"";position:absolute;inset:0;z-index:-1;background:var(--hbg);transform:translateY(101%);transition:transform .5s var(--ease)}
 .btn:hover::before,.btn:focus-visible::before{transform:none}
-.btn:hover,.btn:focus-visible{color:var(--hfg)}
-.btn:active{transform:scale(.97)}
-.btn svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;transition:transform .4s var(--ease)}
+.btn:hover,.btn:focus-visible{color:var(--hfg)}.btn svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;transition:transform .4s var(--ease)}
 .btn:hover svg{transform:translateX(5px)}
 .btn--lime{--bg:var(--lime);--fg:var(--on-accent);--hbg:var(--white);--hfg:var(--black)}
 .btn--ghost{--bg:transparent;--fg:var(--black);border-color:var(--black);--hbg:var(--black);--hfg:var(--white)}
