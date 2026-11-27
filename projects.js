@@ -24,10 +24,10 @@ window.SITE = {
 
   /* ---------- CONTACT & SOCIAL (edit these) ---------- */
   contact: {
-    email: "hello@yourdomain.com",          // ← your real email
-    whatsapp: "212600000000",               // ← country code + number, digits only
+    email: "saadmnaouar88@gmail.com",          // ← your real email
+    whatsapp: "212640441762",             // ← country code + number, digits only
     behance: "https://www.behance.net/mnaouarsaad",
-    instagram: "https://www.instagram.com/yourprofile",
+    instagram: "https://www.instagram.com/saad_mnaouar9/",
     linkedin: "https://www.linkedin.com/in/yourprofile",
     // Optional: paste a Formspree / Getform endpoint to send the form directly.
     // Leave "" to open the visitor's email app instead.
