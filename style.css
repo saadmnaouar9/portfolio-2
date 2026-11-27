@@ -653,3 +653,9 @@ a.pd__cat:hover{background:var(--black);color:var(--accent-t)}
 
 /* tiles with a photo are never dimmed, even when the category has no projects yet */
 .cat--img.cat--soon,.cat--img.cat--soon:hover{opacity:1}
+
+/* contact links: one clean row, same style */
+.socials a{white-space:nowrap}
+.socials a svg.ic{fill:none;transition:none}
+.socials a:hover svg.ic{transform:none}
+.socials a:focus-visible{outline:1px solid var(--white);outline-offset:3px}
